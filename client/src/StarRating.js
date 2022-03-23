@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
+import React, {   useEffect, useState } from 'react';
 import './StarRating.css';
 import { FaStar } from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 
 const StarRating = () => {
+    
 
-//const initialRatings = JSON.parse(localStorage.getItem('rating') || '[]');
-    const [rating, setRating] = useState(null);
+    const initialRatings = localStorage.getItem('rating');
+    const [rating, setRating] = useState(initialRatings);
     const [hover, setHover] = useState(null);
-    //console.log(initialRatings);
-    // useEffect(() => {
-    //     localStorage.setItem('rating', JSON.stringify(rating));
-    // }, [rating]);
-    //const savedRating = localStorage.setItem('star', {rating})
-    //console.log(savedRating);
+    
+     useEffect(() => {
+          localStorage.setItem('rating', (rating));
+     }, [rating]);
+   
+   
+
+   
 
     return (
         <div className='star__radio'>
             {[...Array(5)].map((star, i) => {
                 const ratingValue = i + 1;
+                
                 return (
                     <label key={uuidv4()}>
                         <input 
