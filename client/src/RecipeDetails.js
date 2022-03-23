@@ -12,11 +12,12 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url}) => {
-    console.log(totalNutrients.CA);
-    console.log(typeof(totalNutrients));
-    const NutrientArray = Object.values(totalNutrients.CA);
+    //console.log(totalNutrients.CA);
+    //console.log(typeof(totalNutrients));
+    //const NutrientArray = Object.values(totalNutrients);
     const nutriKeys = Object.keys(totalNutrients);
-    console.log(NutrientArray);
+    //console.log(NutrientArray);
+    console.log(healthLabels);
     
     const [rating, setRating] = useState(0);
     const handleRating = (rate) => {
