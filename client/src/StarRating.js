@@ -3,16 +3,24 @@ import './StarRating.css';
 import { FaStar } from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 
-const StarRating = () => {
+const StarRating = ({uri}) => {
     
+    //Step 1: Get recipe's unique ID in datase.
+    let recipeID = uri.split("#")[1];
+    //Step 2: Get user's unique ID.
+    let userID = "USER";
+    //Step 3: Query "database" for user rating.
+    const ratingID = 'rating-'+recipeID+'-'+userID;
+    const initialRatings = localStorage.getItem(ratingID);
 
-    const initialRatings = localStorage.getItem('rating');
+    console.log(ratingID,initialRatings);
+
     const [rating, setRating] = useState(initialRatings);
     const [hover, setHover] = useState(null);
     
      useEffect(() => {
-          localStorage.setItem('rating', (rating));
-     }, [rating]);
+          localStorage.setItem(ratingID, (rating));
+     });//, [rating]
    
    
 

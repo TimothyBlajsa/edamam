@@ -12,7 +12,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url}) => {
+const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url, uri}) => {
     //console.log(totalNutrients.CA);
     //console.log(typeof(totalNutrients));
     //const NutrientArray = Object.values(totalNutrients);
@@ -114,7 +114,7 @@ const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url
         
         
         <div className={style.StarBox}>
-           <StarRating></StarRating>
+           <StarRating uri={uri}></StarRating>
         </div>
         
             </>
