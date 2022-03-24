@@ -88,4 +88,10 @@ In the event that you receive the ERR:refused to connect/connction, make sure th
 ### ReactJS
 [Routing](https://www.geeksforgeeks.org/how-to-create-a-multi-page-website-using-react-js/)
 
+### Star Rating Component
+[Star Rating](https://www.youtube.com/watch?v=eDw46GYAIDQ)
+
+### Local Storage useEffect Hook
+[useEffect](https://stackoverflow.com/questions/65385644/how-to-save-the-rating-to-localstorage-so-it-doesnt-dissapear-after-refreshing)
+
 ## Test Commit
