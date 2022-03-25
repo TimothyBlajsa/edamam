@@ -65,6 +65,26 @@
 	position: relative;
 }
 
+.note-content {
+    background-color: white;
+    font-family: 'Lato';
+    text-align: center;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.note__main-text {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.note__main-text::first-line {
+    font-style: bold;
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+}
+
 .notes-list {
 	display: grid;
 	grid-gap: 1rem;

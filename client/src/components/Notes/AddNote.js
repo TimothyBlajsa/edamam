@@ -21,7 +21,7 @@ const AddNote = ({ handleAddNote }) => {
 		<div className='note new'>
 			<textarea
 				rows='8'
-				cols='20'
+				cols='22'
 				placeholder='Type to add a note...'
 				value={noteText}
 				onChange={handleChange}

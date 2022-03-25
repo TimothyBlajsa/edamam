@@ -1,5 +1,5 @@
 import React from 'react';
-import RecipeForm from '../components/form-data';
+//import RecipeForm from '../components/form-data';
 import NotesApp from '../components/Notes/Notes';
 
 const Upload = () => {
