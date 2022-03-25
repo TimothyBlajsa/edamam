@@ -101,9 +101,11 @@ textarea:focus {
 	display: flex;
 	align-items: center;
 	background-color: rgb(233, 233, 233);
-	border-radius: 10px;
-	padding: 5px;
 	margin-bottom: 1.5em;
+  border:none;
+  padding: 10px;
+  border-radius: 2rem;
+  box-shadow: -15px -15px 15px rgba(225,225,225,.2), 15px 15px 15px rgba(0,0,0,.1);
 }
 
 .search input {
