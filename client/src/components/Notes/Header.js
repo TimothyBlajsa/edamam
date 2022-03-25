@@ -11,7 +11,7 @@ const Header = ({ handleToggleDarkMode }) => {
 						(previousDarkMode) => !previousDarkMode
 					)
 				}
-				className='save'
+				className='save-mode'
 			>
 				Toggle Mode
 			</button>
