@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { nanoid } from 'nanoid';
+import { v4 as uuidv4 } from 'uuid';
 import NotesList from '../Notes/NotesList';
 import Search from '../Notes/Search';
 import Header from '../Notes/Header';
@@ -7,22 +7,22 @@ import Header from '../Notes/Header';
 const NotesApp = () => {
 	const [notes, setNotes] = useState([
 		{
-			id: nanoid(),
+			id: uuidv4(),
 			text: 'This is my first note!',
 			date: '15/04/2021',
 		},
 		{
-			id: nanoid(),
+			id: uuidv4(),
 			text: 'This is my second note!',
 			date: '21/04/2021',
 		},
 		{
-			id: nanoid(),
+			id: uuidv4(),
 			text: 'This is my third note!',
 			date: '28/04/2021',
 		},
 		{
-			id: nanoid(),
+			id: uuidv4(),
 			text: 'This is my new note!',
 			date: '30/04/2021',
 		},
@@ -52,7 +52,7 @@ const NotesApp = () => {
 	const addNote = (text) => {
 		const date = new Date();
 		const newNote = {
-			id: nanoid(),
+			id: uuidv4(),
 			text: text,
 			date: date.toLocaleDateString(),
 		};
