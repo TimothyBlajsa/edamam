@@ -53,6 +53,7 @@
     border-radius: none;
 	box-shadow: -15px -15px 15px rgba(225,225,225,.2), 15px 15px 15px rgba(0,0,0,.1);
 	margin: 20px;
+    padding: 1rem;
 	display: flex;
 	flex-direction: column;
     justify-content: space-between;
@@ -74,13 +75,15 @@
 }
 
 .note.new {
-	background-color: #67d7cc;
+	background-color: lightgray;
+    font-family: 'Lato';
 }
 
 textarea {
 	border: none;
 	resize: none;
-	background-color: #67d7cc;
+	background-color: lightgray;
+    font-family: 'Lato';
 }
 
 textarea:focus {
@@ -96,7 +99,7 @@ textarea:focus {
 }
 
 .save-mode {
-    background-color: #e1e1e1;
+    background-color: white;
 	border: none;
 	border-radius: 15px;
 	padding: 5px 10px 5px 10px;
@@ -106,17 +109,6 @@ textarea:focus {
 .save:hover {
 	background-color: #ededed;
 	cursor: pointer;
-}
-
-.note {
-	background-color: #fef68a;
-	border-radius: 10px;
-	padding: 1rem;
-	min-height: 170px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	white-space: pre-wrap;
 }
 
 .note-footer {
