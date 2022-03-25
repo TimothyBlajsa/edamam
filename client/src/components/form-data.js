@@ -54,6 +54,7 @@ export default class RecipeForm extends Component {
         localStorage.setItem('user', JSON.stringify(nextState));
     }
 
+    
     render() {
         return (
             <div className="form-container">
@@ -72,6 +73,7 @@ export default class RecipeForm extends Component {
                     </div>
                     <button type="submit" className="btn btn-primary btn-block">Submit</button>
                 </form>
+                
             </div>
         )
     }
