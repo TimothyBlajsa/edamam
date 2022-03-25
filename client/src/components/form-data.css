@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .form-container {
     background-color: gray;
     width: 25rem;
@@ -22,6 +24,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+    text-align: center;
+
+}
+.header__head-text {
+    text-align: center;
+    border-bottom: none;
 }
 
 .dark-mode {
@@ -39,6 +47,21 @@
 	padding-right: 15px;
 	padding-left: 15px;
 	min-height: 100vh;
+}
+
+.note {
+    border-radius: none;
+	box-shadow: -15px -15px 15px rgba(225,225,225,.2), 15px 15px 15px rgba(0,0,0,.1);
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+	background: white;
+	align-items: center;
+	min-width: 50%;
+	font-family: 'Lato';
+	position: relative;
 }
 
 .notes-list {
@@ -69,6 +92,7 @@ textarea:focus {
 	border: none;
 	border-radius: 15px;
 	padding: 5px 10px 5px 10px;
+    margin-left: .5rem;
 }
 
 .save:hover {
@@ -95,6 +119,7 @@ textarea:focus {
 
 .delete-icon {
 	cursor: pointer;
+    margin-left: 1rem;
 }
 
 .search {

@@ -17,12 +17,8 @@ const Upload = () => {
     return (
         <>
             <div className='App'>
-                <h1>Upload your own recipe</h1>
-                <p></p>
-                {/*<input type='text' onClick={getInputValue} className='search-bar'/>*/}
                 <NotesApp></NotesApp>
             </div>
-            
         </>
     )
 }
