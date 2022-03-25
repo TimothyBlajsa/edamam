@@ -1,5 +1,6 @@
 import React from 'react';
 import RecipeForm from '../components/form-data';
+import NotesApp from '../components/Notes/Notes';
 
 const Upload = () => {
 //    const getInputValue = (event) => {
@@ -19,7 +20,7 @@ const Upload = () => {
                 <h1>Upload your own recipe</h1>
                 <p></p>
                 {/*<input type='text' onClick={getInputValue} className='search-bar'/>*/}
-                <RecipeForm></RecipeForm>
+                <NotesApp></NotesApp>
             </div>
             
         </>
