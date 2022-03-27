@@ -23,21 +23,14 @@
 .header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
     text-align: center;
-
+	border-bottom: 1px solid black;
+	
 }
 .header__head-text {
     text-align: center;
     border-bottom: none;
-}
-
-.dark-mode {
-	background-color: black;
-}
-
-.dark-mode h1 {
-	color: white;
 }
 
 .container {
@@ -146,11 +139,11 @@ textarea:focus {
 	display: flex;
 	align-items: center;
 	background-color: rgb(233, 233, 233);
-	margin-bottom: 1.5em;
-  border:none;
-  padding: 10px;
-  border-radius: 2rem;
-  box-shadow: -15px -15px 15px rgba(225,225,225,.2), 15px 15px 15px rgba(0,0,0,.1);
+	margin: 1.5em;
+  	border:none;
+  	padding: 10px;
+  	border-radius: 2rem;
+  	box-shadow: -15px -15px 15px rgba(225,225,225,.2), 15px 15px 15px rgba(0,0,0,.1);
 }
 
 .search input {
