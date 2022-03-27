@@ -8,21 +8,25 @@ const NotesApp = () => {
 	const [notes, setNotes] = useState([
 		{
 			id: uuidv4(),
+			title: "Note 1",
 			text: 'This is my first note!',
 			date: '15/04/2021',
 		},
 		{
 			id: uuidv4(),
+			title: "Note 2",
 			text: 'This is my second note!',
 			date: '21/04/2021',
 		},
 		{
 			id: uuidv4(),
+			title: "Note 3",
 			text: 'This is my third note!',
 			date: '28/04/2021',
 		},
 		{
 			id: uuidv4(),
+			title: "Note 4",
 			text: 'This is my new note!',
 			date: '30/04/2021',
 		},
@@ -49,10 +53,11 @@ const NotesApp = () => {
 		);
 	}, [notes]);
 
-	const addNote = (text) => {
+	const addNote = (title,text) => {
 		const date = new Date();
 		const newNote = {
 			id: uuidv4(),
+			title: title,
 			text: text,
 			date: date.toLocaleDateString(),
 		};
@@ -72,7 +77,8 @@ const NotesApp = () => {
 				<Search handleSearchNote={setSearchText} />
 				<NotesList
 					notes={notes.filter((note) =>
-						note.text.toLowerCase().includes(searchText)
+						note.title.toLowerCase().includes(searchText)
+						
 					)}
 					handleAddNote={addNote}
 					handleDeleteNote={deleteNote}
