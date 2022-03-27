@@ -16,6 +16,9 @@ const Navbar = () => {
                     <NavLink to="/recipes" activestyle="true">
                         Recipes
                     </NavLink>
+                    <NavLink to="/upload" activestyle="true">
+                        Upload
+                    </NavLink>
                 </NavMenu>
             </Nav>
         </>

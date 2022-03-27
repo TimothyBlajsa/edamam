@@ -1,9 +1,10 @@
 //import React from 'react';
 import style from './recipe.module.css';
 import {v4 as uuidv4} from "uuid";
-import { useState } from 'react';
+//import {  useState } from 'react';
 //import StarRatingComponent from 'react-star-rating-component';
-import {Rating} from 'react-simple-star-rating';
+//import {Rating} from 'react-simple-star-rating';
+import StarRating from '../../client/src/StarRating';
 import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -11,20 +12,13 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url}) => {
+const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url, uri}) => {
     //console.log(totalNutrients.CA);
     //console.log(typeof(totalNutrients));
     //const NutrientArray = Object.values(totalNutrients);
     const nutriKeys = Object.keys(totalNutrients);
     //console.log(NutrientArray);
-    console.log(healthLabels);
-    
-    const [rating, setRating] = useState(0);
-    const handleRating = (rate) => {
-        setRating(rate)
-    }
-
-    console.log({rating});
+   // console.log(healthLabels);
     
     return (
         <>
@@ -120,7 +114,7 @@ const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url
         
         
         <div className={style.StarBox}>
-            <Rating onClick={handleRating} ratingValue={rating}></Rating>
+           <StarRating uri={uri}></StarRating>
         </div>
         
             </>

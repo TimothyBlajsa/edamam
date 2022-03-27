@@ -47,6 +47,7 @@ return (
 			healthLabels={recipe.recipe.healthLabels}
 			totalNutrients={recipe.recipe.totalNutrients}
 			url={recipe.recipe.url}
+			uri={recipe.recipe.uri}
 		/>
 
 		))}
