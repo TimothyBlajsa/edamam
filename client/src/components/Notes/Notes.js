@@ -5,47 +5,53 @@ import Search from '../Notes/Search';
 import Header from '../Notes/Header';
 
 const NotesApp = () => {
+
+	//Default notes/recipes
+	//Function accepts notes as variable and then sets their value
 	const [notes, setNotes] = useState([
 		{
 			id: uuidv4(),
-			title: "Note 1",
-			body: 'This is my first note!',
-			date: '15/04/2021',
+			title: "Chicken Vesuvio",
+			body: 'I love chicken vesuvio so much!',
+			date: '7/17/2000',
 		},
 		{
 			id: uuidv4(),
-			title: "Note 2",
-			body: 'This is my second note!',
-			date: '21/04/2021',
+			title: "Apple Pie",
+			body: 'Get a load of them apples!',
+			date: '7/17/2000',
 		},
 		{
 			id: uuidv4(),
-			title: "Note 3",
-			body: 'This is my third note!',
-			date: '28/04/2021',
+			title: "Taylor Ham Bagel",
+			body: 'Is it Taylor Ham or Pork Roll?',
+			date: '7/17/2000',
 		},
 		{
 			id: uuidv4(),
-			title: "Note 4",
-			body: 'This is my new note!',
-			date: '30/04/2021',
+			title: "Ramen Bowl",
+			body: 'Naruto is named after fish roll!',
+			date: '7/17/2000',
 		},
 	]);
 
+	//Function accepts searchText as variable and then searches based on user input
 	const [searchText, setSearchText] = useState('');
 
-	//const [darkMode, setDarkMode] = useState(false);
-
 	useEffect(() => {
+
+		//Retrieve notes from localStorage
 		const savedNotes = JSON.parse(
 			localStorage.getItem('react-notes-app-data')
 		);
 
+		//Save edited note
 		if (savedNotes) {
 			setNotes(savedNotes);
 		}
 	}, []);
 
+	//Set notes to localStorage
 	useEffect(() => {
 		localStorage.setItem(
 			'react-notes-app-data',
@@ -53,6 +59,7 @@ const NotesApp = () => {
 		);
 	}, [notes]);
 
+	//Note Structure
 	const addNote = (title, body) => {
 		const date = new Date();
 		const newNote = {
@@ -61,10 +68,12 @@ const NotesApp = () => {
 			body: body,
 			date: date.toLocaleDateString(),
 		};
+
 		const newNotes = [...notes, newNote];
 		setNotes(newNotes);
 	};
 
+	//Delete note
 	const deleteNote = (id) => {
 		const newNotes = notes.filter((note) => note.id !== id);
 		setNotes(newNotes);
