@@ -9,25 +9,25 @@ const NotesApp = () => {
 		{
 			id: uuidv4(),
 			title: "Note 1",
-			text: 'This is my first note!',
+			body: 'This is my first note!',
 			date: '15/04/2021',
 		},
 		{
 			id: uuidv4(),
 			title: "Note 2",
-			text: 'This is my second note!',
+			body: 'This is my second note!',
 			date: '21/04/2021',
 		},
 		{
 			id: uuidv4(),
 			title: "Note 3",
-			text: 'This is my third note!',
+			body: 'This is my third note!',
 			date: '28/04/2021',
 		},
 		{
 			id: uuidv4(),
 			title: "Note 4",
-			text: 'This is my new note!',
+			body: 'This is my new note!',
 			date: '30/04/2021',
 		},
 	]);
@@ -53,12 +53,12 @@ const NotesApp = () => {
 		);
 	}, [notes]);
 
-	const addNote = (title,text) => {
+	const addNote = (title, body) => {
 		const date = new Date();
 		const newNote = {
 			id: uuidv4(),
 			title: title,
-			text: text,
+			body: body,
 			date: date.toLocaleDateString(),
 		};
 		const newNotes = [...notes, newNote];

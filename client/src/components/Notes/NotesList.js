@@ -12,7 +12,7 @@ const NotesList = ({
 				<Note
 					id={note.id}
 					title={note.title}
-					text={note.text}
+					body={note.body}
 					date={note.date}
 					handleDeleteNote={handleDeleteNote}
 					key={uuidv4()}
