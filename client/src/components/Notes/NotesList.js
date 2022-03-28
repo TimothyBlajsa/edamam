@@ -3,11 +3,7 @@ import AddNote from './AddNote';
 import { v4 as uuidv4 } from 'uuid';
 
 //Pass notes, handleAddNote, and handleDeleteNote through variable NotesList
-const NotesList = ({
-	notes,
-	handleAddNote,
-	handleDeleteNote,
-}) => {
+const NotesList = ({ notes, handleAddNote, handleDeleteNote }) => {
 	return (
 		<div className='notes-list' key={uuidv4()}>
 			{notes.map((note) => (
