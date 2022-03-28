@@ -1,6 +1,8 @@
 import Note from './Note';
 import AddNote from './AddNote';
 import { v4 as uuidv4 } from 'uuid';
+
+//Pass notes, handleAddNote, and handleDeleteNote through variable NotesList
 const NotesList = ({
 	notes,
 	handleAddNote,
