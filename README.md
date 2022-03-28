@@ -94,6 +94,9 @@ In the event that you receive the ERR:refused to connect/connction, make sure th
 ### Local Storage useEffect Hook
 [useEffect](https://stackoverflow.com/questions/65385644/how-to-save-the-rating-to-localstorage-so-it-doesnt-dissapear-after-refreshing)
 
+### Note Functionality
+[note-to-localStorage](React Notes App Tutorial from Scratch | A CSS and React Project you can add to your Portfolio!)
+
 ## Test Commit
 
 This is a test commit
