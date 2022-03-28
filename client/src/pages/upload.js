@@ -5,10 +5,10 @@ const Upload = () => {
     return (
         <>
             <div className='App'>
-                <NotesApp></NotesApp>
+                <NotesApp />
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Upload;
