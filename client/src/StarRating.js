@@ -50,7 +50,7 @@ const StarRating = ({uri}) => {
                     </label>
                 );
             })}
-            <p>star is {rating}</p>
+           
         </div>
     )
 }
