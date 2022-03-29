@@ -17,7 +17,6 @@
     "react-markdown": "^8.0.1",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
-    "react-simple-star-rating": "^4.0.5",
     "react-uuid": "^1.0.2",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4"
