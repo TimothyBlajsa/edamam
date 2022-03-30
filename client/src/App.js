@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Recipes from "./pages/recipes";
 import Upload from "./pages/upload";
+import Favorites from "./pages/favorite";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/recipes' element={<Recipes />} />
         <Route path='/upload' element={<Upload />} />
+        <Route path='/favorite' element={<Favorites />} />
       </Routes>
     </Router>
     </>

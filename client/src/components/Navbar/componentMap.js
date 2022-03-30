@@ -19,6 +19,9 @@ const Navbar = () => {
                     <NavLink to="/upload" activestyle="true">
                         Upload
                     </NavLink>
+                    <NavLink to="/favorite" activestyle="true">
+                        Favorites
+                    </NavLink>
                 </NavMenu>
             </Nav>
         </>
