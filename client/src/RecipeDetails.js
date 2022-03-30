@@ -11,14 +11,16 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import HeartIcon from '@mui/icons-material/Favorite';
 
 const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url, uri}) => {
     //console.log(totalNutrients.CA);
     //console.log(typeof(totalNutrients));
     //const NutrientArray = Object.values(totalNutrients);
     const nutriKeys = Object.keys(totalNutrients);
+    
     //console.log(NutrientArray);
-   // console.log(healthLabels);
+    //console.log(healthLabels);
     
     return (
         <>
@@ -115,6 +117,7 @@ const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url
         
         <div className={style.StarBox}>
            <StarRating uri={uri}></StarRating>
+           <HeartIcon className='btn--favorite'></HeartIcon>
         </div>
         
             </>

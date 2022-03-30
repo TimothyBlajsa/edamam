@@ -69,3 +69,12 @@ h1 {
 .MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root{
 	font-family: "Lato";
 }
+
+.btn--favorite {
+	align-items: center;
+}
+
+.saveIcon {
+	cursor: pointer;
+	padding-left: 1rem;
+}

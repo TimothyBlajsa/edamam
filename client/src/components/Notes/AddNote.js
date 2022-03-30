@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SaveIcon from '@mui/icons-material/Save';
 
 const AddNote = ({ handleAddNote }) => {
 
@@ -48,9 +49,8 @@ const AddNote = ({ handleAddNote }) => {
 				<small>
 					{characterLimit - noteBody.length} Remaining
 				</small>
-				<button className='save' onClick={handleSaveClick}>
-					Save
-				</button>
+				
+				<SaveIcon className='saveIcon' onClick={handleSaveClick} style = {{paddingLeft: '1rem'}}/>
 			</div>
 		</div>
 	);
