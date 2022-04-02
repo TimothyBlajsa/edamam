@@ -1,0 +1,7 @@
+.heart__radio input[type=radio]{
+    display:none;
+}
+
+.heart__radio {
+    display:none;
+}

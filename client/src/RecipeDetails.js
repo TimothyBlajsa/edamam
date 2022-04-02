@@ -1,4 +1,5 @@
 //import React from 'react';
+import { useEffect, useState } from 'react';
 import style from './recipe.module.css';
 import {v4 as uuidv4} from "uuid";
 //import {  useState } from 'react';
@@ -11,8 +12,15 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import HeartIcon from '@mui/icons-material/Favorite';
 
+//import { FaHeart } from 'react-icons/fa'
+import Favoriting from '../../client/src/FavoriteList';
+
+
+function favorite() {
+    console.log('has been favorited')
+    
+}
 const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url, uri}) => {
     //console.log(totalNutrients.CA);
     //console.log(typeof(totalNutrients));
@@ -21,6 +29,19 @@ const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url
     
     //console.log(NutrientArray);
     //console.log(healthLabels);
+
+    // let favoritesList = [];
+    //  function addFavorites() {
+    //       //console.log('hearted');
+    //       //console.log({uri});
+    //       favoritesList.push({uri});
+    //       console.log(favoritesList);
+    //   }
+    //   console.log(favoritesList);
+    let toggle_color;
+    
+
+
     
     return (
         <>
@@ -117,10 +138,9 @@ const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url
         
         <div className={style.StarBox}>
            <StarRating uri={uri}></StarRating>
-           <HeartIcon className='btn--favorite'></HeartIcon>
+           
         </div>
-        
-            </>
+        </>
     )
 };
 

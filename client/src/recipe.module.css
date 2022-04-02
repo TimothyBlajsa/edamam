@@ -78,3 +78,9 @@ h1 {
 	cursor: pointer;
 	padding-left: 1rem;
 }
+
+.fav__Button {
+	cursor: pointer;
+	background: none;
+	background-color: white;
+}

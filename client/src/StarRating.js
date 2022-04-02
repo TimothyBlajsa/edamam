@@ -13,7 +13,7 @@ const StarRating = ({uri}) => {
     const ratingID = 'rating-'+recipeID+'-'+userID;
     const initialRatings = localStorage.getItem(ratingID);
 
-    console.log(ratingID,initialRatings);
+    //console.log(ratingID,initialRatings);
 
     const [rating, setRating] = useState(initialRatings);
     const [hover, setHover] = useState(null);
