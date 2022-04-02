@@ -3,6 +3,7 @@ import {v4 as uuidv4} from 'uuid'
 import '../App.css';
 import Recipe from '../Recipe';
 import axios from 'axios';
+import { createContext, useContext } from 'react';
 
 const App = () => {
 
@@ -25,7 +26,8 @@ const getSearch = e => {
 	setQuery(search);
 	setSearch("");
 }
-
+const fav = [];
+//const userContext = createContext();
 return (
 	<div className="App">
 	
@@ -36,6 +38,7 @@ return (
 			Search
 		</button>
 	</form>
+	
 	<div className="recipes">
 		{recipes.map(recipe => (
 		<Recipe
@@ -48,9 +51,11 @@ return (
 			totalNutrients={recipe.recipe.totalNutrients}
 			url={recipe.recipe.url}
 			uri={recipe.recipe.uri}
+			fav={fav}
 		/>
-
+			
 		))}
+		
 	</div>
 	<div className='footer'>POWERED by EDAMAM</div>
 

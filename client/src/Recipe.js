@@ -4,14 +4,14 @@ import style from './recipe.module.css';
 //import * as React from 'react';
 import Favoriting from '../../client/src/FavoriteList'
 
-const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,url,uri}) =>{
+const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,url,uri,fav}) =>{
 	const [show, setShow] = useState(false)
 	return(
 		<div className={style.recipe}>
 			
 			<h1>
 				{title}
-				<Favoriting uri={uri} />
+				<Favoriting uri={uri} fav={fav} />
 			</h1>
 			<img className={style.image} src={image} alt=""/>
 
