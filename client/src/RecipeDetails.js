@@ -38,7 +38,7 @@ const RecipeDetails = ({ingredients, healthLabels, calories, totalNutrients, url
     //       console.log(favoritesList);
     //   }
     //   console.log(favoritesList);
-    let toggle_color;
+    
     
 
 

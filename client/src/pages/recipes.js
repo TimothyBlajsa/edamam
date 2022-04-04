@@ -4,6 +4,7 @@ import '../App.css';
 import Recipe from '../Recipe';
 import axios from 'axios';
 //import { createContext, useContext } from 'react';
+import Favoriting from '../FavoriteList';
 
 const App = () => {
 
@@ -26,6 +27,41 @@ const getSearch = e => {
 	setQuery(search);
 	setSearch("");
 }
+
+const [favorites, setFavorites] = useState([]);
+//console.log(setFavorites);
+
+        useEffect(() => {
+            const recipeFavorites = (
+                localStorage.getItem('app-favorites')
+            );
+        
+            if (recipeFavorites){
+                setFavorites(recipeFavorites);
+            }
+        }, []);
+        
+        const saveToLocalStorage = (items) => {
+            localStorage.setItem('app-favorites', (items));
+        };
+        
+        const addFavoriteRecipe = (uri) => {
+            const newFavoriteList = [...favorites, uri];
+            setFavorites(newFavoriteList);
+            saveToLocalStorage(newFavoriteList);
+        };
+        
+        const removeFavoriteRecipe = (recipe) => {
+            const newFavoriteList = favorites.filter(
+                (favorite) => favorite.recipe.id !== recipe.id
+            );
+        
+            setFavorites(newFavoriteList);
+            saveToLocalStorage(newFavoriteList);
+        };
+        
+        
+
 
 return (
 	<div className="App">
@@ -50,6 +86,7 @@ return (
 			totalNutrients={recipe.recipe.totalNutrients}
 			url={recipe.recipe.url}
 			uri={recipe.recipe.uri}
+			
 		/>
 		))}
 	</div>
