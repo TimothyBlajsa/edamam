@@ -13,6 +13,8 @@ const Favoriting = ({uri, handleFavoritesAdd}, props) => {
     let userID = 'USER';
     //fav.push('hi');
    // console.log(fav)
+
+   //ATTEMPT 1 currently being used
    function onFav() {
     if (document.querySelector('#accept').checked === true) {
         console.log('favorited-'+'RECIPEID');
@@ -23,10 +25,11 @@ const Favoriting = ({uri, handleFavoritesAdd}, props) => {
     else {
         console.log('unfavorited'+'RECIPEID');
         document.querySelector('#heart_button').style.color = 'black';
-        newArr.pop(uri)
     }
 }
-//console.log(newArr)
+
+//ATTEMPT 2.5 commented out for now
+
 //    //initialize fav value from localstorage
 //    const favoritesSTR = localStorage.getItem('favorites');
 //    let fav = false;
@@ -36,6 +39,9 @@ const Favoriting = ({uri, handleFavoritesAdd}, props) => {
 //     console.log(favorites)
 //    }
   // document.querySelector('#accept').checked = fav;
+
+  //ATTEMPT 2
+
     const favoriteID = 'favorite-'+RecipeID;
     //console.log(favoriteID);
     const initialFavorite = localStorage.getItem(favoriteID);
@@ -58,6 +64,8 @@ const Favoriting = ({uri, handleFavoritesAdd}, props) => {
     }}
 
 
+    //ATTEMPT 3 commented out for now
+    
         // const [favs, setFavs] = useState([]);
         
         // //console.log(favs);
