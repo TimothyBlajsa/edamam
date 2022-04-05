@@ -2,7 +2,7 @@ import React, {   createContext, useEffect, useState } from 'react';
 import {FaHeart} from 'react-icons/fa';
 import '../src/FavoriteList.css';
 import {useContext} from 'react';
-//import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai';
+import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai';
 
 
 
@@ -53,19 +53,42 @@ const Favoriting = ({uri, handleFavoritesAdd}, props) => {
         localStorage.setItem(favoriteID, [(favorite)]);
     })
    
-   function toggle(){
-    if (document.querySelector('#accept').checked === true) {
-        console.log('favorited-'+'RECIPEID');
-        document.querySelector('#heart_button').style.color = 'red';
+//    function toggle(){
+//     if (document.querySelector('#accept').checked === true) {
+//         console.log('favorited-'+'RECIPEID');
+//         document.querySelector('#heart_button').style.color = 'red';
+//     }
+//     if (document.getElementById('accept').checked === false) {
+//         console.log('unfavorited'+'RECIPEID');
+//         document.querySelector('#heart_button').style.color = 'black';
+//     }}
+
+//var btnHrt= document.getElementById('heart_button');
+    function buttonClick(){
+        var myIndex = newArr.indexOf(uri)
+        // //document.querySelector('#heart_button').style.color ='red';
+        // document.querySelector('heart_button').toggle(AiOutlineHeart)
+        // newArr.push(uri)
+        // console.log(newArr)
+        if (document.getElementById('heart_button').style.color === 'red'){
+            document.getElementById('heart_button').style.color = 'grey'
+            console.log('item removed from favorites')
+            //newArr.filter(uri)
+            if (myIndex !== -1){
+                newArr.splice(myIndex, 1)
+            }
+        }
+        else {
+            document.getElementById('heart_button').style.color = 'red'
+            console.log('item added to favorites');
+            newArr.push(uri)
+        }
+        console.log(newArr)
     }
-    if (document.getElementById('accept').checked === false) {
-        console.log('unfavorited'+'RECIPEID');
-        document.querySelector('#heart_button').style.color = 'black';
-    }}
 
 
     //ATTEMPT 3 commented out for now
-    
+
         // const [favs, setFavs] = useState([]);
         
         // //console.log(favs);
@@ -85,17 +108,18 @@ const Favoriting = ({uri, handleFavoritesAdd}, props) => {
         //     console.log(favs);
         // };
         
-    
+    // <input type='checkbox' name='accept'  onClick={()=> {setFavorite('yes'); onFav(); console.log(favorite)}} className='heart__check' id='accept' value='yes'></input>
 
 
     return (
         <>
         
-        <label >
+        
             
-            <input type='checkbox' name='accept'  onClick={()=> {setFavorite('yes'); onFav(); console.log(favorite)}} className='heart__check' id='accept' value='yes'></input>
-        <FaHeart id='heart_button'  />
-        </label>
+            <span className='heart_button_container' onClick={()=>buttonClick()}>
+        <AiFillHeart color='grey' id='heart_button'  />
+        </span>
+        
         </>
     )
 }
