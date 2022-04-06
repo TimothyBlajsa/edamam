@@ -4,7 +4,7 @@ import {v4 as uuidv4} from 'uuid';
 //import Recipe from '../Recipe';
 
 const Favorites = () => {
-
+    console.log(localStorage.getItem('favoritesArray'));
 
     
     return (

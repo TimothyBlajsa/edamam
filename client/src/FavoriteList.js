@@ -18,7 +18,7 @@ const Favoriting = ({uri, favorites}) => {
         //Make sure URI is saved for each heart icon
         //Find element that has unique URI and click is true
         const el = document.querySelector(`[data="${uri}"]`);
-
+        
         /*
             For testing logs only
             console.log(el);
@@ -30,7 +30,8 @@ const Favoriting = ({uri, favorites}) => {
         //Else toggle grey to red and make value true
         if (favorites[uri]){
             el.style.fill = 'grey';
-            favorites[uri] = false;
+            favorites[uri] = undefined;
+            delete(favorites[uri]);
         }
         else {
             el.style.fill = 'red';
@@ -38,23 +39,23 @@ const Favoriting = ({uri, favorites}) => {
         } 
        // console.log(favorites[uri]);
 
-       //Make new array from the properties of the object
-       newArr = Object.keys(favorites);
-       //console.table(newArr)
+        console.table(favorites);
 
-       //TREAT AS MASTERLIST FOR LATER REFERENCE
-       //Filter based on what is considered 'favorite'
-       const favoritesArray = newArr.filter((uri)=>{
-        return favorites[uri]
-    })        
-        console.table(favoritesArray);      
+        //Set favoritesArray in localstorage
+        localStorage.setItem('favoritesArray', JSON.stringify(favorites));
+    }
+
+    //On click, check the state of the heart
+    function checkHeart() {
+        if (favorites[uri]) return "red";
+        return "gray";
     }
 
     
     return (
         <>
             <span className='heart_button_container' >
-                <AiFillHeart color='grey' id='heart_button'  onClick={(event)=>buttonClick(event)} data={uri} name='heart_btn'/>
+                <AiFillHeart color={checkHeart()} id='heart_button'  onClick={(event)=>buttonClick(event)} data={uri} name='heart_btn'/>
             </span>
         </>
     )

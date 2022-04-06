@@ -64,7 +64,8 @@ const getSearch = e => {
 		//Object will store URI's and boolean value indicating whether it is a favorite or not
 		//Store URI's as object's property
 		//Favorites is a LOOKUP TABLE
-        const favorites = {};
+        const favorites = JSON.parse(localStorage.getItem('favoritesArray'));
+		
 
 return (
 	<div className="App">
