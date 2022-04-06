@@ -6,12 +6,15 @@ import { useEffect, useState } from 'react'
 import '../App.css';
 import Recipe from '../Recipe';
 import axios from 'axios';
+import {FaTrash} from 'react-icons/fa'
 
 
 const Favorites = (recipe) => {
-    console.log(localStorage.getItem('favoritesArray'));
-    console.log(Recipe);
-    
+    // console.log(localStorage.getItem('favoritesArray'));
+    // console.log(Recipe);
+    function deleteFav(){
+        console.log('deleted');
+    }
 
         // const [recipes, setRecipes] = useState([]);
         // //const [search, setSearch] = useState("");
@@ -27,11 +30,12 @@ const Favorites = (recipe) => {
     
     let favorites = JSON.parse(localStorage.getItem("favoritesArray"));
     let favs = Object.values(favorites);
-
+    
     return (
     <>
         <div className='App'>
         <div className="recipes">
+        
 		{favs.map(recipe => (
 		<Recipe
 			key={uuidv4()}
@@ -46,6 +50,7 @@ const Favorites = (recipe) => {
 			favorites={favorites}
 			
 		/>
+        
 		))}
 	</div>
     </div>

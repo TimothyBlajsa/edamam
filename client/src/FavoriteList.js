@@ -11,8 +11,6 @@ const Favoriting = ({uri, favorites, recObj}) => {
     // let userID = 'USER';
     
     function buttonClick(event){
-        console.log(uri);
-        console.log(recObj)
         
         //Working Code : DO NOT DELETE
 
@@ -40,7 +38,7 @@ const Favoriting = ({uri, favorites, recObj}) => {
         } 
        // console.log(favorites[uri]);
 
-        console.table(favorites);
+        console.table(favorites,uri);
 
         //Set favoritesArray in localstorage
         localStorage.setItem('favoritesArray', JSON.stringify(favorites));

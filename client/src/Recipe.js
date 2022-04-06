@@ -3,6 +3,9 @@ import RecipeDetails from "./RecipeDetails"
 import style from './recipe.module.css';
 //import * as React from 'react';
 import Favoriting from '../../client/src/FavoriteList'
+import {FaTrash} from 'react-icons/fa';
+import {v4 as uuidv4} from 'uuid'
+//import DeleteRecipe from '../../client/src/DeleteRecipe';
 
 const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,url,uri, favorites}) =>{
 	const [show, setShow] = useState(false)
@@ -18,13 +21,20 @@ const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,ur
 		uri,
 	}
 
-	console.log(recObj);
+	function deleteFav(){
+		console.log('deleted item')
+		console.log(document.querySelector(`[data-uri="${uri}"]`))
+		document.querySelector(`[data-uri="${uri}"]`).style.display = 'none';
+		
+	}
+	//console.log(recObj);
 	return(
-		<div className={style.recipe}>
+		<div className={style.recipe} data-uri={uri}>
 			
 			<h1>
 				{title}
 				<Favoriting uri={uri} favorites={favorites} recObj={recObj}/>
+				<FaTrash onClick={()=>{deleteFav()}}/>
 			</h1>
 			<img className={style.image} src={image} alt=""/>
 
