@@ -28,39 +28,39 @@ const getSearch = e => {
 	setSearch("");
 }
 
-const [favorites, setFavorites] = useState([]);
-//console.log(setFavorites);
+// const [favorites, setFavorites] = useState([]);
+// //console.log(setFavorites);
 
-        useEffect(() => {
-            const recipeFavorites = (
-                localStorage.getItem('app-favorites')
-            );
+//         useEffect(() => {
+//             const recipeFavorites = (
+//                 localStorage.getItem('app-favorites')
+//             );
         
-            if (recipeFavorites){
-                setFavorites(recipeFavorites);
-            }
-        }, []);
+//             if (recipeFavorites){
+//                 setFavorites(recipeFavorites);
+//             }
+//         }, []);
         
-        const saveToLocalStorage = (items) => {
-            localStorage.setItem('app-favorites', (items));
-        };
+//         const saveToLocalStorage = (items) => {
+//             localStorage.setItem('app-favorites', (items));
+//         };
         
-        const addFavoriteRecipe = (uri) => {
-            const newFavoriteList = [...favorites, uri];
-            setFavorites(newFavoriteList);
-            saveToLocalStorage(newFavoriteList);
-        };
+//         const addFavoriteRecipe = (uri) => {
+//             const newFavoriteList = [...favorites, uri];
+//             setFavorites(newFavoriteList);
+//             saveToLocalStorage(newFavoriteList);
+//         };
         
-        const removeFavoriteRecipe = (recipe) => {
-            const newFavoriteList = favorites.filter(
-                (favorite) => favorite.recipe.id !== recipe.id
-            );
+//         const removeFavoriteRecipe = (recipe) => {
+//             const newFavoriteList = favorites.filter(
+//                 (favorite) => favorite.recipe.id !== recipe.id
+//             );
         
-            setFavorites(newFavoriteList);
-            saveToLocalStorage(newFavoriteList);
-        };
+//             setFavorites(newFavoriteList);
+//             saveToLocalStorage(newFavoriteList);
+//         };
         
-        
+        const favorites = {};
 
 
 return (
@@ -86,6 +86,7 @@ return (
 			totalNutrients={recipe.recipe.totalNutrients}
 			url={recipe.recipe.url}
 			uri={recipe.recipe.uri}
+			favorites={favorites}
 			
 		/>
 		))}

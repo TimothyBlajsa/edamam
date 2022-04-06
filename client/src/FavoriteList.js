@@ -7,9 +7,9 @@ import {v4 as uuidv4} from 'uuid';
 
 
 
-const newArr = [];
+let newArr = [];
 console.log(newArr)
-const Favoriting = ({uri}) => {  
+const Favoriting = ({uri, favorites}) => {  
     let RecipeID = uri.split('#')[1];
     let userID = 'USER';
     //fav.push('hi');
@@ -65,7 +65,7 @@ const Favoriting = ({uri}) => {
 //     }}
 
 //var btnHrt= document.getElementById('heart_button');
-const favorites = {};
+//const favorites = {};
     function buttonClick(event){
         console.log(uri);
         var myIndex = newArr.indexOf(uri)
@@ -105,6 +105,11 @@ const favorites = {};
         } 
        // console.log(favorites[uri]);
 
+       newArr = Object.keys(favorites);
+       console.table(newArr)
+       console.table(newArr.filter((uri)=>{
+           return favorites[uri]
+       }))
 
 
 
