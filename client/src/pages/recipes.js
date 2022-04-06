@@ -60,8 +60,11 @@ const getSearch = e => {
 //             saveToLocalStorage(newFavoriteList);
 //         };
         
+		//Create object to be passed as prop to FavoriteList
+		//Object will store URI's and boolean value indicating whether it is a favorite or not
+		//Store URI's as object's property
+		//Favorites is a LOOKUP TABLE
         const favorites = {};
-
 
 return (
 	<div className="App">
