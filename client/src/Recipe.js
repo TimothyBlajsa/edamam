@@ -27,7 +27,8 @@ const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,ur
 		if (timesClicked%2===0){
 			console.log('run second function')
 		} else {
-			console.log('run first function')
+			setTimeout(()=> {console.log('run first function')},3000)
+			//console.log('run first function')
 		}
 		// console.log('deleted item')
 		// console.log(document.querySelector(`[data-uri="${uri}"]`))
