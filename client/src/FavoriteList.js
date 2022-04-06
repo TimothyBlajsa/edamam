@@ -5,13 +5,14 @@ import {v4 as uuidv4} from 'uuid';
 
 let newArr = [];
 
-const Favoriting = ({uri, favorites}) => {  
+const Favoriting = ({uri, favorites, recObj}) => {  
     //For later when integrating USER LOGIN and LOCALSTORAGE
     // let RecipeID = uri.split('#')[1];
     // let userID = 'USER';
     
     function buttonClick(event){
         console.log(uri);
+        console.log(recObj)
         
         //Working Code : DO NOT DELETE
 
@@ -35,7 +36,7 @@ const Favoriting = ({uri, favorites}) => {
         }
         else {
             el.style.fill = 'red';
-            favorites[uri] = true;
+            favorites[uri] = recObj;
         } 
        // console.log(favorites[uri]);
 

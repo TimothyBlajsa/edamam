@@ -6,12 +6,25 @@ import Favoriting from '../../client/src/FavoriteList'
 
 const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,url,uri, favorites}) =>{
 	const [show, setShow] = useState(false)
+
+	const recObj = {
+		title,
+		calories,
+		image,
+		ingredients,
+		healthLabels,
+		totalNutrients,
+		url,
+		uri,
+	}
+
+	console.log(recObj);
 	return(
 		<div className={style.recipe}>
 			
 			<h1>
 				{title}
-				<Favoriting uri={uri} favorites={favorites}/>
+				<Favoriting uri={uri} favorites={favorites} recObj={recObj}/>
 			</h1>
 			<img className={style.image} src={image} alt=""/>
 
