@@ -3,7 +3,7 @@ import RecipeDetails from "./RecipeDetails"
 import style from './recipe.module.css';
 //import * as React from 'react';
 import Favoriting from '../../client/src/FavoriteList'
-import {FaTrash} from 'react-icons/fa';
+import {FaPause, FaTrash} from 'react-icons/fa';
 import {v4 as uuidv4} from 'uuid'
 //import DeleteRecipe from '../../client/src/DeleteRecipe';
 
@@ -20,11 +20,19 @@ const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,ur
 		url,
 		uri,
 	}
-
+	var timesClicked = 0;
 	function deleteFav(){
-		console.log('deleted item')
-		console.log(document.querySelector(`[data-uri="${uri}"]`))
-		document.querySelector(`[data-uri="${uri}"]`).style.display = 'none';
+		timesClicked++;
+
+		if (timesClicked%2===0){
+			console.log('run second function')
+		} else {
+			console.log('run first function')
+		}
+		// console.log('deleted item')
+		// console.log(document.querySelector(`[data-uri="${uri}"]`))
+		
+		// document.querySelector(`[data-uri="${uri}"]`).style.display = 'none';
 		
 	}
 	//console.log(recObj);
