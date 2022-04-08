@@ -20,15 +20,63 @@ const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,ur
 		url,
 		uri,
 	}
+	//const el = document.querySelector(`[data="${uri}"]`);
+	//console.log(el)
 	var timesClicked = 0;
+	//var removal;
+	// function deleteItem(){
+	// 	document.querySelector(`[data-uri="${uri}"]`).style.opacity = .5;
+		
+		
+	// 		setTimeout(()=> {//el.style.fill = 'grey';
+    //         // favorites[uri] = undefined;
+    //         // delete(favorites[uri]);
+	// 		console.log('run first function')
+	// 		document.querySelector(`[data-uri="${uri}"]`).style.visibility = 'hidden';
+	// 		})
+		
+	// }
+	// function stopDelete(){
+
+			
+	// 		//this.cancel(deleteItem());
+	// 		console.log('run second function')
+	// 		document.querySelector(`[data-uri="${uri}"]`).style.opacity = 1;
+	// 		document.querySelector(`[data-uri="${uri}"]`).style.visibility= 'visible';
+	// }
 	function deleteFav(){
 		timesClicked++;
 
 		if (timesClicked%2===0){
-			console.log('run second function')
+			
+			
+			 console.log('run second function')
+			 //el.style.fill = 'grey';
+				// favorites[uri] = undefined;
+				// delete(favorites[uri]);
+				document.querySelector(`[data-uri="${uri}"]`).style.opacity = 1;
+				document.querySelector(`[data-uri="${uri}"]`).style.visibility = 'visible';
+			
+			return
+			// document.querySelector(`[data-uri="${uri}"]`).style.opacity = 1;
+			// document.querySelector(`[data-uri="${uri}"]`).style.visibility= 'visible';
 		} else {
-			setTimeout(()=> {console.log('run first function')},3000)
-			//console.log('run first function')
+			document.querySelector(`[data-uri="${uri}"]`).style.opacity = .5;
+			setTimeout(()=> {//el.style.fill = 'grey';
+            // favorites[uri] = undefined;
+            // delete(favorites[uri]);
+			if (timesClicked%2===0){
+				return
+			}
+			else {
+				console.log(timesClicked)
+				console.log('run first function')
+				document.querySelector(`[data-uri="${uri}"]`).style.visibility = 'hidden';
+			}
+			
+		},5000)
+			
+			//console.table(favorites[uri])
 		}
 		// console.log('deleted item')
 		// console.log(document.querySelector(`[data-uri="${uri}"]`))
