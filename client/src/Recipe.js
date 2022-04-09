@@ -20,36 +20,12 @@ const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,ur
 		url,
 		uri,
 	}
-	//const el = document.querySelector(`[data="${uri}"]`);
-	//console.log(el)
+	
 	var timesClicked = 0;
-	//var removal;
-	// function deleteItem(){
-	// 	document.querySelector(`[data-uri="${uri}"]`).style.opacity = .5;
-		
-		
-	// 		setTimeout(()=> {//el.style.fill = 'grey';
-    //         // favorites[uri] = undefined;
-    //         // delete(favorites[uri]);
-	// 		console.log('run first function')
-	// 		document.querySelector(`[data-uri="${uri}"]`).style.visibility = 'hidden';
-	// 		})
-		
-	// }
-	// function stopDelete(){
-
-			
-	// 		//this.cancel(deleteItem());
-	// 		console.log('run second function')
-	// 		document.querySelector(`[data-uri="${uri}"]`).style.opacity = 1;
-	// 		document.querySelector(`[data-uri="${uri}"]`).style.visibility= 'visible';
-	// }
+	
 	function deleteFav(){
 		timesClicked++;
-
 		if (timesClicked%2===0){
-			
-			
 			 console.log('run second function')
 			 //el.style.fill = 'grey';
 				// favorites[uri] = undefined;
@@ -91,7 +67,6 @@ const Recipe = ({title,calories,image,ingredients,healthLabels,totalNutrients,ur
 			<h1>
 				{title}
 				<Favoriting uri={uri} favorites={favorites} recObj={recObj}/>
-				<FaTrash onClick={()=>{deleteFav()}}/>
 			</h1>
 			<img className={style.image} src={image} alt=""/>
 
